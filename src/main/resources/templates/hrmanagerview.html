@@ -41,7 +41,7 @@
 
         <div> 
 
-            <form method="POST" th:action="@{/approved}">
+            <form  th:action="@{/approved}" th:object="${timesheet}" method="post">
                 <table>
                     <thead>
                         <tr>
@@ -305,8 +305,8 @@
                     
                 </table>
                 
-                     <input type="text" id="isApproved" name="isApproved"/>
-                    <input type="submit" value="Submit"/>
+                     <input type="submit" id="isApprovedNot" value="Reject" />
+                    <input type="submit" value="Approve"/>
                         </form>
                         </div>
                         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

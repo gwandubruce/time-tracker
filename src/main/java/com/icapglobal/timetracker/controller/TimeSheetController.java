@@ -11,7 +11,10 @@ import com.icapglobal.timetracker.repository.TimeSheetObjectRepository;
 import com.icapglobal.timetracker.services.TimeSheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -21,7 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  */
 @Controller
 public class TimeSheetController {
-
+private TimeSheetObject tso=new TimeSheetObject();
     @Autowired
     private EmployeeRepository employeeRepository;
     @Autowired
@@ -37,17 +40,17 @@ public class TimeSheetController {
     }
 
     @RequestMapping("/employeeview")
-    public String editTimeSheet(TimeSheetObject timesheet) {
-//        timeSheetService.calculateTotalBalance(timesheet);
-//        timeSheetService.vacationDaysUsedTotal(timesheet);
-//        timeSheetObjectRepository.save(timesheet);
+    public String editTimeSheet(Model model) {
         
+        model.addAttribute("timesheet", new TimeSheetObject());
 
         return "employeeview";
     }
 
     @RequestMapping("/supervisorview")
     public String approveTimeSheets() {
+       
+        
 
         return "supervisorview";
     }
@@ -60,7 +63,10 @@ public class TimeSheetController {
 
     @RequestMapping("/update")
     @ResponseBody
-    public String update() {
+    public String update(@ModelAttribute TimeSheetObject ts) {
+
+        
+       timeSheetObjectRepository.save(ts);
 
         return "Submitted For Approval";
     }

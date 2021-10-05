@@ -25,10 +25,10 @@ import javax.persistence.Table;
 public class TimeSheetObject implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
 
-    @OneToOne
+    
     private Employee employee;
     private String log ;
     private Integer vacationDaysUsedTotal;

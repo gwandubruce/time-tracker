@@ -41,7 +41,7 @@
 
         <div > 
 
-            <form method="POST" th:action="@{/update}" th:field="${ruleForm}">
+            <form th:action="@{/update}" method="post" >
                 <table>
                     <thead>
                         <tr>
@@ -313,7 +313,18 @@
                             <th>Employee Initials</th>
                             <th>Supervisor Initials</th>
                             <th>Date (day/month)</th>
-                           
+                            <th> <p>"Leave the spaces at right blank for days attended full-time.  For days absent, enter the following codes:</p>
+
+                               <p> V (or .5 V) = Vacation
+                                SL (or .5 SL) = Sick Leave</p>
+
+                                <p>H = Holiday
+                                D = Death in the Family
+                                O = Other
+                                "</p>
+
+                            </th>
+
 
                         </tr>
                     </thead>

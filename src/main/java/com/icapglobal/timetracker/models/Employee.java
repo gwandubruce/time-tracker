@@ -28,7 +28,7 @@ import javax.persistence.OneToOne;
 @Entity
 public class Employee implements Serializable {
 
-    @OneToOne(mappedBy = "employee")
+   
     private TimeSheetObject timeSheetObject;
 
     @Id
@@ -111,6 +111,14 @@ public class Employee implements Serializable {
 
     public void setEmployeeId(Long EmployeeId) {
         this.EmployeeId = EmployeeId;
+    }
+
+    public TimeSheetObject getTimeSheetObject() {
+        return timeSheetObject;
+    }
+
+    public void setTimeSheetObject(TimeSheetObject timeSheetObject) {
+        this.timeSheetObject = timeSheetObject;
     }
     
     
