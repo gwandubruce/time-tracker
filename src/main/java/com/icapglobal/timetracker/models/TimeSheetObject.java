@@ -7,27 +7,32 @@ package com.icapglobal.timetracker.models;
 
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author Bruce Gwandu
  */
 @Entity
+@Table(name="timesheet")
 public class TimeSheetObject implements Serializable {
+
     @Id
-    @GeneratedValue(strategy=GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
+
     @OneToOne
     private Employee employee;
-    private String log;
-    private Integer vacationDaysUsed;
-    private Integer sickLeaveUsed;
+    private String log ;
+    private Integer vacationDaysUsedTotal;
+    private Integer sickLeaveUsedTotal;
     private String employeeInitials;
     private String supervisorInitials;
     private LocalDate dateMonth;
@@ -62,20 +67,38 @@ public class TimeSheetObject implements Serializable {
         this.log = log;
     }
 
+    public Integer getVacationDaysUsedTotal() {
+        return vacationDaysUsedTotal;
+    }
+
+    public void setVacationDaysUsedTotal(Integer vacationDaysUsedTotal) {
+        this.vacationDaysUsedTotal = vacationDaysUsedTotal;
+    }
+
+    public Integer getSickLeaveUsedTotal() {
+        return sickLeaveUsedTotal;
+    }
+
+    public void setSickLeaveUsedTotal(Integer sickLeaveUsedTotal) {
+        this.sickLeaveUsedTotal = sickLeaveUsedTotal;
+    }
+
+   
+
     public Integer getVacationDaysUsed() {
-        return vacationDaysUsed;
+        return vacationDaysUsedTotal;
     }
 
     public void setVacationDaysUsed(Integer vacationDaysUsed) {
-        this.vacationDaysUsed = vacationDaysUsed;
+        this.vacationDaysUsedTotal = vacationDaysUsed;
     }
 
     public Integer getSickLeaveUsed() {
-        return sickLeaveUsed;
+        return sickLeaveUsedTotal;
     }
 
     public void setSickLeaveUsed(Integer sickLeaveUsed) {
-        this.sickLeaveUsed = sickLeaveUsed;
+        this.sickLeaveUsedTotal = sickLeaveUsed;
     }
 
     public String getEmployeeInitials() {
@@ -149,9 +172,7 @@ public class TimeSheetObject implements Serializable {
     public void setComments(String comments) {
         this.comments = comments;
     }
+
     
-    
-    
-    
-   
+
 }

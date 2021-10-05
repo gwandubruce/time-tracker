@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
     <head>
-        <title> SSS </title>
+        <title> Time Tracker </title>
 
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,7 +12,7 @@
 
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">SecuriTree<svg xmlns="http://www.w3.org/2000/svg" style="color: greenyellow" width="20" height="20" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
+                <a class="navbar-brand" href="#">Time Tracker<svg xmlns="http://www.w3.org/2000/svg" style="color: greenyellow" width="20" height="20" fill="currentColor" class="bi bi-tree" viewBox="0 0 16 16">
                         <path d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777l-3-4.5zM6.437 4.758A.5.5 0 0 0 6 4.5h-.066L8 1.401 10.066 4.5H10a.5.5 0 0 0-.424.765L11.598 8.5H11.5a.5.5 0 0 0-.447.724L12.69 12.5H3.309l1.638-3.276A.5.5 0 0 0 4.5 8.5h-.098l2.022-3.235a.5.5 0 0 0 .013-.507z"/>
                     </svg></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,11 +27,9 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" th:href="@{/view}">View SecuriTree</a>
+                            <a class="nav-link" th:href="@{/employeeview}">Edit Time Tracker</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" th:href="@{/manage}">Manage Doors</a>
-                        </li>
+                       
                     </ul>
                 </div>
                 <form class="d-flex" method="POST" th:action="@{/logout}" style="alignment-adjust:middle ">
@@ -63,15 +61,26 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="ruleModel,iteration : ${allRules}">
-                            <td th:text="${ruleModel.id}"></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"></td>
+                        <tr >
+                            <td id="day" th:value="1">1</td>
+                            <td><input type="text" /></td>
+                            <td><input type="text" /></td>
+                            <td><input type="text" /></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
+                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
                         </tr>
                     </tbody>
+                    
                 </table>
-                <br>
-                    <input type="submit" value="Update All">
+                
+                    <input type="submit" value="Submit For Approval"/>
                         </form>
                         </div>
                         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
