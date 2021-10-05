@@ -39,8 +39,8 @@ public class ProjectConfiguration extends WebSecurityConfigurerAdapter  {
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable().authorizeRequests().antMatchers("/", "/employeview", "/supervisorview","/hrmanagerview","/unlock","/submit","/submit0")
-                .authenticated()
+        http.csrf().disable().authorizeRequests().antMatchers("/", "/employeeview", "/supervisorview","/hrmanagerview","/unlock","/submit","/submit0")
+                .permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/login")

@@ -5,11 +5,15 @@
  */
 package com.icapglobal.timetracker.controller;
 
+import com.icapglobal.timetracker.models.TimeSheetObject;
 import com.icapglobal.timetracker.repository.EmployeeRepository;
 import com.icapglobal.timetracker.repository.TimeSheetObjectRepository;
+import com.icapglobal.timetracker.services.TimeSheetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  *
@@ -23,28 +27,49 @@ public class TimeSheetController {
     @Autowired
     private TimeSheetObjectRepository timeSheetObjectRepository;
 
+    @Autowired
+    private TimeSheetService timeSheetService;
+
     @GetMapping("/login")
     public String login() {
 
         return "login";
     }
 
-    @GetMapping("/employeeview")
-    public String editTimeSheet() {
+    @RequestMapping("/employeeview")
+    public String editTimeSheet(TimeSheetObject timesheet) {
+//        timeSheetService.calculateTotalBalance(timesheet);
+//        timeSheetService.vacationDaysUsedTotal(timesheet);
+//        timeSheetObjectRepository.save(timesheet);
+        
 
         return "employeeview";
     }
 
-    @GetMapping("/supervisorview")
+    @RequestMapping("/supervisorview")
     public String approveTimeSheets() {
 
         return "supervisorview";
     }
 
-    @GetMapping("/hrmanagerview")
+    @RequestMapping("/hrmanagerview")
     public String finalApproval() {
 
         return "hrmanagerview";
+    }
+
+    @RequestMapping("/update")
+    @ResponseBody
+    public String update() {
+
+        return "Submitted For Approval";
+    }
+
+    @RequestMapping("/approved")
+    @ResponseBody
+    public String approved() {
+
+        return "Successfully approved";
     }
 
 }

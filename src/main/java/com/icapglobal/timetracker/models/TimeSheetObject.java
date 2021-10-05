@@ -42,6 +42,8 @@ public class TimeSheetObject implements Serializable {
     private Integer newBalance;
     private String onLeaveYesOrNo;
     private String comments;
+    private String isApproved;
+    private Integer total;
 
     public Integer getId() {
         return id;
@@ -172,6 +174,24 @@ public class TimeSheetObject implements Serializable {
     public void setComments(String comments) {
         this.comments = comments;
     }
+
+    public String getIsApproved() {
+        return isApproved;
+    }
+
+    public void setIsApproved(String isApproved) {
+        this.isApproved = isApproved;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
+
+  
 
     
 

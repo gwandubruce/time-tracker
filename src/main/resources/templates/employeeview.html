@@ -29,7 +29,7 @@
                         <li class="nav-item">
                             <a class="nav-link" th:href="@{/employeeview}">Edit Time Tracker</a>
                         </li>
-                       
+
                     </ul>
                 </div>
                 <form class="d-flex" method="POST" th:action="@{/logout}" style="alignment-adjust:middle ">
@@ -37,11 +37,11 @@
                 </form>
             </div>
         </nav>
-        <h2 class="lead" align="center" style="margin-top: 2%">Main Menu Options</h2>
 
-        <div style="align-items: center; border-style: solid;border-color: lightcoral;padding-top:2%;margin-bottom: 10%;margin-left: 40%;margin-right: 39% " align="center"> 
 
-            <form method="POST" th:action="@{/updateAllRules}" th:field="${ruleForm}">
+        <div > 
+
+            <form method="POST" th:action="@{/update}" th:field="${ruleForm}">
                 <table>
                     <thead>
                         <tr>
@@ -63,30 +63,391 @@
                     <tbody>
                         <tr >
                             <td id="day" th:value="1">1</td>
-                            <td><input type="text" /></td>
-                            <td><input type="text" /></td>
-                            <td><input type="text" /></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.title'}" th:value="${ruleModel.title}"/></td>
-                            <td><input type="text" th:name="${'rule'+iteration.index+'.body'}" th:value="${ruleModel.body}"/></td>
+                            <td><input type="text" name="log" /></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
                         </tr>
+                        <tr >
+                            <td id="day" th:value="1">2</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">3</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">4</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">5</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">6</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">7</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">8</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">9</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">10</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">11</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">12</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">13</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">14</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">15</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+                        <tr >
+                            <td id="day" th:value="1">16</td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                            <td><input type="text" name="log"/></td>
+                        </tr>
+
                     </tbody>
-                    
+
                 </table>
-                
-                    <input type="submit" value="Submit For Approval"/>
-                        </form>
-                        </div>
-                        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-                        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-                        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vacation Days Used</th>
+                            <th>Sick Leave Used</th>
+                            <th>Employee Initials</th>
+                            <th>Supervisor Initials</th>
+                            <th>Date (day/month)</th>
+                           
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+                        <tr >
+
+                            <td><input type="text" name="vacationDaysUsedTotal" id="vacationDaysUsedTotal"/></td>
+                            <td><input type="text" name="sickLeaveUsedTotal" id="sickLeaveUsedTotal"/></td>
+                            <td><input type="text" name="employeeInitials" id="employeeInitials"/></td>
+                            <td><input type="text" name="supervisorInitials" id="supervisorInitials"/></td>
+                            <td><input type="text"  id="total" name="total"/></td>
+
+                        </tr>
+
+                    </tbody>>
 
 
-                        </body>
-                        </html>
+                </table>
+
+                <input type="submit" value="Submit For Approval"/>
+            </form>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+    </body>
+</html>
